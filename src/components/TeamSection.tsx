@@ -3,12 +3,12 @@ const TeamSection = () => {
     {
       name: "Touraj Vaziri",
       role: "Instructor / Software Engineer",
-      image: "👨‍💻"
+      image: "/touraj.jpeg"
     },
     {
       name: "MohammadReza Khamseh", 
       role: "Product Designer",
-      image: "👨‍🎨"
+      image: "/moha.jpeg"
     }
   ];
 
@@ -37,9 +37,13 @@ const TeamSection = () => {
               key={index}
               className="bg-card border border-border rounded-xl p-8 text-center hover:border-brand-orange/50 transition-all duration-300 group"
             >
-              {/* Profile Image Placeholder */}
-              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-secondary to-muted rounded-2xl flex items-center justify-center text-6xl group-hover:scale-105 transition-transform duration-300">
-                {member.image}
+              {/* Profile Image */}
+              <div className="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               <h3 className="text-2xl font-bold text-foreground mb-2">{member.name}</h3>
