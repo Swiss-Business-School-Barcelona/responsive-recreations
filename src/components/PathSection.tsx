@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 const PathSection = () => {
-  const [activeCard, setActiveCard] = useState(0);
-  
   const steps = [
     {
       number: "1",
@@ -42,21 +38,12 @@ const PathSection = () => {
           </p>
         </div>
         
-        {/* Stacked Step Cards */}
-        <div className="relative max-w-md mx-auto h-[400px]">
+        {/* Step Cards */}
+        <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
-              onClick={() => setActiveCard(index)}
-              className={`absolute inset-0 bg-card border border-border rounded-xl p-8 cursor-pointer transition-all duration-500 transform-gpu ${
-                activeCard === index 
-                  ? 'z-30 scale-100 rotate-0 border-brand-orange/50 shadow-2xl' 
-                  : `z-${20 - index * 5} scale-95 ${
-                      index === 0 ? 'rotate-[-2deg] translate-x-[-8px]' :
-                      index === 1 ? 'rotate-[1deg] translate-x-[4px]' :
-                      'rotate-[-1deg] translate-x-[8px]'
-                    }`
-              } hover:scale-[0.98] hover:shadow-lg`}
+              className="bg-card border border-border rounded-xl p-8 hover:border-brand-orange/50 transition-all duration-300 relative overflow-hidden group"
             >
               {/* Step Number Badge */}
               <div className="flex items-center space-x-4 mb-6">
@@ -70,23 +57,8 @@ const PathSection = () => {
               <p className="text-muted-foreground leading-relaxed">{step.description}</p>
               
               {/* Decorative gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent transition-opacity duration-300 pointer-events-none ${
-                activeCard === index ? 'opacity-100' : 'opacity-0'
-              }`} />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </div>
-          ))}
-        </div>
-        
-        {/* Card indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {steps.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveCard(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                activeCard === index ? 'bg-brand-orange' : 'bg-muted-foreground/30'
-              }`}
-            />
           ))}
         </div>
       </div>
