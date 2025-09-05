@@ -25,7 +25,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 98%;
 
     --muted: 220 20% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 85%;
 
     --accent: 220 20% 15%;
     --accent-foreground: 0 0% 98%;
@@ -89,7 +89,7 @@ All colors MUST be HSL.
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted-foreground: 215 20.2% 80%;
 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
@@ -122,6 +122,23 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Make text less transparent globally */
+  .text-muted-foreground {
+    opacity: 0.7 !important;
+  }
+  
+  /* Improve small text readability */
+  .text-xs {
+    opacity: 0.95 !important;
+  }
+  
+  /* Improve text contrast for better readability */
+  p, span, div {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
