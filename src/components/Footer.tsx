@@ -12,7 +12,7 @@ const Footer = () => {
                 className="w-5 h-5 object-contain"
               />
             </div>
-            <span className="text-xl font-bold text-foreground">BuildNoCode</span>
+            <span className="text-xl font-bold text-muted-foreground">BuildNoCode</span>
           </div>
           
           {/* Navigation Links */}

@@ -40,7 +40,7 @@ const PricingSection = () => {
               💰 PRICING & FAQ'S
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-4">
             Frequently Asked <span className="italic font-light">Questions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -51,11 +51,11 @@ const PricingSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Pricing Card */}
           <div className="bg-card border border-border rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Price</h3>
+            <h3 className="text-2xl font-bold text-muted-foreground mb-6">Price</h3>
             
             <div className="mb-6">
               <div className="text-sm text-muted-foreground mb-2">Total Value: <span className="line-through">€960</span></div>
-              <div className="text-5xl font-bold text-foreground mb-6">€420</div>
+              <div className="text-5xl font-bold text-muted-foreground mb-6">€420</div>
             </div>
             
             <Button variant="brand" size="lg" className="w-full mb-6 text-lg">
@@ -88,7 +88,7 @@ const PricingSection = () => {
                   value={`item-${index}`}
                   className="bg-card border border-border rounded-xl px-6 py-2 hover:border-brand-orange/50 transition-colors"
                 >
-                  <AccordionTrigger className="text-left font-medium text-foreground hover:text-brand-orange hover:no-underline">
+                  <AccordionTrigger className="text-left font-medium text-muted-foreground hover:text-brand-orange hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground leading-relaxed pb-4">

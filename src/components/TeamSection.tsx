@@ -22,7 +22,7 @@ const TeamSection = () => {
               👥 THE TEAM
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-4">
             Meet the People <span className="italic font-light">Behind This</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -46,7 +46,7 @@ const TeamSection = () => {
                 />
               </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-2">{member.name}</h3>
+              <h3 className="text-2xl font-bold text-muted-foreground mb-2">{member.name}</h3>
               <p className="text-muted-foreground mb-6">{member.role}</p>
               
               {/* Social Links */}

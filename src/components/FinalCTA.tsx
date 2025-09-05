@@ -10,10 +10,10 @@ const FinalCTA = () => {
         </div>
         
         {/* Main Heading */}
-        <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-4 leading-tight">
           Ready to bring your idea to life?
         </h2>
-        <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-8 leading-tight">
           Let's <span className="italic font-light">Build Together</span>
         </h2>
         

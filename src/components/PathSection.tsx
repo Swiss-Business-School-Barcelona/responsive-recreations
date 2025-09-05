@@ -30,7 +30,7 @@ const PathSection = () => {
               🚀 PATH
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-4">
             Your Journey to <span className="italic font-light">App Creation</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -53,7 +53,7 @@ const PathSection = () => {
                 <div className="text-3xl">{step.icon}</div>
               </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
+              <h3 className="text-2xl font-bold text-muted-foreground mb-4">{step.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{step.description}</p>
               
               {/* Decorative gradient */}

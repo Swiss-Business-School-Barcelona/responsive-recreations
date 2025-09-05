@@ -12,23 +12,23 @@ const Header = () => {
               className="w-5 h-5 object-contain"
             />
           </div>
-          <span className="text-xl font-bold text-foreground">BuildNoCode</span>
+          <span className="text-xl font-bold text-muted-foreground">BuildNoCode</span>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#program" className="text-foreground hover:text-brand-orange transition-colors">
+          <a href="#program" className="text-muted-foreground hover:text-brand-orange transition-colors">
             Program
           </a>
-          <a href="#path" className="text-foreground hover:text-brand-orange transition-colors">
+          <a href="#path" className="text-muted-foreground hover:text-brand-orange transition-colors">
             Path
           </a>
-          <a href="#location" className="text-foreground hover:text-brand-orange transition-colors">
+          <a href="#location" className="text-muted-foreground hover:text-brand-orange transition-colors">
             Location
           </a>
-          <a href="#pricing" className="text-foreground hover:text-brand-orange transition-colors">
+          <a href="#pricing" className="text-muted-foreground hover:text-brand-orange transition-colors">
             Pricing
           </a>
-          <a href="#team" className="text-foreground hover:text-brand-orange transition-colors">
+          <a href="#team" className="text-muted-foreground hover:text-brand-orange transition-colors">
             Team
           </a>
         </nav>

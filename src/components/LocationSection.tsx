@@ -9,7 +9,7 @@ const LocationSection = () => {
               📍 LOCATION
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-4">
             Where You'll <span className="italic font-light">Learn Best</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -31,7 +31,7 @@ const LocationSection = () => {
                 <span className="text-brand-orange">📍</span>
               </div>
               <div>
-                <p className="font-semibold text-foreground">Barcelona City Center</p>
+                <p className="font-semibold text-muted-foreground">Barcelona City Center</p>
                 <p className="text-muted-foreground">Easy access by metro and bus</p>
               </div>
             </div>

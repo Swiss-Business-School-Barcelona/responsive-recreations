@@ -121,12 +121,12 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-muted-foreground;
   }
   
   /* Make text less transparent globally */
   .text-muted-foreground {
-    opacity: 0.7 !important;
+    opacity: 0.85 !important;
   }
   
   /* Improve small text readability */

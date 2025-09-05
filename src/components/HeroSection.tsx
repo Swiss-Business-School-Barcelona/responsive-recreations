@@ -31,10 +31,10 @@ const HeroSection = () => {
         </div>
         
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-muted-foreground mb-6 leading-tight">
           Build Your Dream
         </h1>
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-muted-foreground mb-4 leading-tight">
           App in <span className="italic font-light">6 Weeks</span>
         </h1>
         
