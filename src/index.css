@@ -8,9 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* BuildNoCode Design System - Dark theme with orange accents */
-    --background: 220 26% 8%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 0%; /* pure black in HSL */
+    --foreground: 0 0% 100%; /* pure white */
 
     --card: 220 20% 12%;
     --card-foreground: 0 0% 98%;
