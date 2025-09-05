@@ -3,17 +3,17 @@ const ProgramSection = () => {
     {
       title: "Nail Your Idea",
       description: "Use Design Thinking to uncover real problems before you build anything.",
-      icon: "🎯"
+      icon: "/lightbulb.png"
     },
     {
       title: "Build It Right", 
       description: "Build smarter with modern tools and AI-powered development techniques.",
-      icon: "📊"
+      icon: "/build.png"
     },
     {
       title: "Launch to Win",
       description: "Launch with clarity and impact so your app gets noticed from day one.",
-      icon: "🚀"
+      icon: "/launch.png"
     }
   ];
 
@@ -42,7 +42,17 @@ const ProgramSection = () => {
               key={index}
               className="bg-card border border-border rounded-xl p-8 hover:border-brand-orange/50 transition-all duration-300 hover:shadow-[0_0_30px_-5px_hsl(var(--brand-orange)/0.2)]"
             >
-              <div className="text-4xl mb-6">{feature.icon}</div>
+              <div className="mb-6">
+                {feature.icon.startsWith('/') ? (
+                  <img 
+                    src={feature.icon} 
+                    alt={feature.title}
+                    className="w-12 h-12 object-contain"
+                  />
+                ) : (
+                  <span className="text-4xl">{feature.icon}</span>
+                )}
+              </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
