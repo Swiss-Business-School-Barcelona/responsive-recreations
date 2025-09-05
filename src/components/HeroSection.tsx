@@ -1,8 +1,26 @@
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  // Generate snowflakes
+  const snowflakes = Array.from({ length: 50 }, (_, i) => (
+    <div
+      key={i}
+      className="snowflake"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 3}s`,
+        animationDuration: `${3 + Math.random() * 4}s`,
+        opacity: Math.random() * 0.7 + 0.3,
+      }}
+    />
+  ));
+
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-gradient-to-br from-background to-secondary/50">
+    <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-gradient-to-br from-background to-secondary/50 relative overflow-hidden">
+      {/* Snowfall Animation */}
+      <div className="absolute inset-0 pointer-events-none">
+        {snowflakes}
+      </div>
       <div className="container mx-auto max-w-4xl text-center">
         {/* Status Badge */}
         <div className="inline-flex items-center space-x-2 mb-8">
