@@ -6,7 +6,11 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center">
-            <span className="text-background font-bold text-sm">⚡</span>
+            <img 
+              src="/sparkle.png" 
+              alt="BuildNoCode Logo"
+              className="w-5 h-5 object-contain"
+            />
           </div>
           <span className="text-xl font-bold text-foreground">BuildNoCode</span>
         </div>
@@ -30,7 +34,11 @@ const Header = () => {
         </nav>
         
         <Button variant="brand" size="sm" className="hidden md:flex">
-          <span className="mr-2">⚡</span>
+          <img 
+            src="/sparkle.png" 
+            alt=""
+            className="w-4 h-4 mr-2 object-contain"
+          />
           Apply Now
         </Button>
       </div>

@@ -6,7 +6,11 @@ const Footer = () => {
           {/* Logo and Brand */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center">
-              <span className="text-background font-bold text-sm">⚡</span>
+              <img 
+                src="/sparkle.png" 
+                alt="BuildNoCode Logo"
+                className="w-5 h-5 object-contain"
+              />
             </div>
             <span className="text-xl font-bold text-foreground">BuildNoCode</span>
           </div>
