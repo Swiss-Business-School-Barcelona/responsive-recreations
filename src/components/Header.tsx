@@ -68,7 +68,7 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg z-50">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg z-[9999]">
           <nav className="flex flex-col space-y-4 p-6">
             <a 
               href="#program" 
