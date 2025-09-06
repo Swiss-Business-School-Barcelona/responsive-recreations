@@ -3,12 +3,16 @@ const TeamSection = () => {
     {
       name: "Touraj Vaziri",
       role: "Instructor / Software Engineer",
-      image: "/touraj.jpeg"
+      image: "/touraj.jpeg",
+      linkedin: "https://www.linkedin.com/in/tourajvaziri/",
+      email: "vtouraj@gmail.com"
     },
     {
       name: "MohammadReza Khamseh", 
       role: "Product Designer",
-      image: "/moha.jpeg"
+      image: "/moha.jpeg",
+      linkedin: "https://www.linkedin.com/in/moharza/",
+      email: "moharzakhamseh@gmail.com"
     }
   ];
 
@@ -51,12 +55,26 @@ const TeamSection = () => {
               
               {/* Social Links */}
               <div className="flex justify-center space-x-4">
-                <div className="w-10 h-10 bg-secondary border border-border rounded-lg flex items-center justify-center hover:border-brand-orange/50 hover:bg-brand-orange/10 transition-colors cursor-pointer">
+                <a 
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-secondary border border-border rounded-lg flex items-center justify-center hover:border-brand-orange/50 hover:bg-brand-orange/10 transition-colors cursor-pointer"
+                  title="LinkedIn Profile"
+                >
                   <span className="text-muted-foreground">💼</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary border border-border rounded-lg flex items-center justify-center hover:border-brand-orange/50 hover:bg-brand-orange/10 transition-colors cursor-pointer">
+                </a>
+                <a 
+                  href={`mailto:${member.email}?subject=Hello from BuildNoCode`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = `mailto:${member.email}?subject=Hello from BuildNoCode`;
+                  }}
+                  className="w-10 h-10 bg-secondary border border-border rounded-lg flex items-center justify-center hover:border-brand-orange/50 hover:bg-brand-orange/10 transition-colors cursor-pointer"
+                  title="Send Email"
+                >
                   <span className="text-muted-foreground">💬</span>
-                </div>
+                </a>
               </div>
             </div>
           ))}
