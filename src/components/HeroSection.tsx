@@ -47,10 +47,11 @@ const HeroSection = () => {
         <Button 
           variant="brand" 
           size="lg" 
-          className="mb-16 text-lg px-8 py-6"
+          className="mb-16 text-base md:text-lg px-4 md:px-8 py-6 w-full max-w-sm md:max-w-none md:w-auto mx-auto"
           onClick={() => window.open('https://buildnocode.lovable.app/', '_blank')}
         >
-          Apply Now - Limited Spots Available
+          <span className="hidden sm:inline">Apply Now - Limited Spots Available</span>
+          <span className="sm:hidden">Apply Now - Limited Spots</span>
           <span className="ml-2">↗</span>
         </Button>
         
