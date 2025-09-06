@@ -80,9 +80,9 @@ const PricingSection = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 justify-items-center lg:justify-items-stretch">
           {/* Pricing Card */}
-          <div className="bg-card border border-border rounded-xl p-8">
+          <div className="bg-card border border-border rounded-xl p-8 w-full max-w-md lg:max-w-none">
             <h3 className="text-2xl font-bold text-muted-foreground mb-6">Price</h3>
             
             <div className="mb-6">
@@ -121,7 +121,7 @@ const PricingSection = () => {
           </div>
           
           {/* FAQ Accordion */}
-          <div className="space-y-4">
+          <div className="space-y-4 w-full max-w-md lg:max-w-none">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
