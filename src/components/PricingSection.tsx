@@ -90,7 +90,12 @@ const PricingSection = () => {
               <div className="text-5xl font-bold text-muted-foreground mb-6">€420</div>
             </div>
             
-            <Button variant="brand" size="lg" className="w-full mb-6 text-lg">
+            <Button 
+              variant="brand" 
+              size="lg" 
+              className="w-full mb-6 text-lg"
+              onClick={() => window.open('https://buildnocode.lovable.app/', '_blank')}
+            >
               <span className="mr-2">🎁</span>
               Claim Free Intro Class
             </Button>

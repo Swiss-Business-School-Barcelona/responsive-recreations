@@ -44,7 +44,12 @@ const HeroSection = () => {
         </p>
         
         {/* CTA Button */}
-        <Button variant="brand" size="lg" className="mb-16 text-lg px-8 py-6">
+        <Button 
+          variant="brand" 
+          size="lg" 
+          className="mb-16 text-lg px-8 py-6"
+          onClick={() => window.open('https://buildnocode.lovable.app/', '_blank')}
+        >
           Apply Now - Limited Spots Available
           <span className="ml-2">↗</span>
         </Button>

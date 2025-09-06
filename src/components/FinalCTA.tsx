@@ -23,7 +23,12 @@ const FinalCTA = () => {
         </p>
         
         {/* CTA Button */}
-        <Button variant="brand" size="lg" className="text-lg px-12 py-6 mb-16">
+        <Button 
+          variant="brand" 
+          size="lg" 
+          className="text-lg px-12 py-6 mb-16"
+          onClick={() => window.open('https://buildnocode.lovable.app/', '_blank')}
+        >
           Apply Now
           <span className="ml-2">↗</span>
         </Button>

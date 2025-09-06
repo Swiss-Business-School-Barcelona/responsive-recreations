@@ -33,9 +33,14 @@ const Header = () => {
           </a>
         </nav>
         
-        <Button variant="brand" size="sm" className="hidden md:flex">
-          <img 
-            src="/sparkle.png" 
+        <Button 
+          variant="brand" 
+          size="sm" 
+          className="hidden md:flex"
+          onClick={() => window.open('https://buildnocode.lovable.app/', '_blank')}
+        >
+          <img
+            src="/sparkle.png"
             alt=""
             className="w-4 h-4 mr-2 object-contain"
           />
