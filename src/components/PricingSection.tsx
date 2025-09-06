@@ -14,19 +14,51 @@ const PricingSection = () => {
     },
     {
       question: "What kind of app can I really build in 6 weeks?",
-      answer: "You'll build a fully functional web or mobile app from scratch using modern no-code and AI-powered development tools."
+      answer: "You'll build a working digital product with real functionality, not just a prototype. What it does depends on your idea."
     },
     {
       question: "How much time should I put in each week?",
-      answer: "Plan for 4-6 hours per week of focused work, including live sessions, project work, and peer collaboration."
+      answer: "Plan for around 8 to 10 hours per week. It's flexible, but the more you commit, the more you'll get out of it."
     },
     {
       question: "What happens after the program ends?",
-      answer: "You'll have a launched app, ongoing community support, and the skills to continue building and iterating on your product."
+      answer: "You'll leave with a working product, and a roadmap to grow it. We also help you plan your next steps if you want to keep building."
     },
     {
       question: "What if I don't have an idea?",
-      answer: "Perfect! The first part of the program focuses on ideation and problem discovery. We'll help you find and validate a great idea to build."
+      answer: "That's fine. We'll work as a team to brainstorm and choose an idea together."
+    },
+    {
+      question: "Which idea will we develop a product for?",
+      answer: "In the first class, everyone will share their ideas. As a group, we'll review them and choose the most promising one to develop together. That idea will become our focus for the entire bootcamp."
+    },
+    {
+      question: "How do these AI tools actually work?",
+      answer: "We'll show you how to use no-code platforms powered by AI. They're beginner-friendly and designed to help you build fast."
+    },
+    {
+      question: "I'm not a tech person. Is that okay?",
+      answer: "Totally. This bootcamp is designed for creative thinkers, not just techies. If you can use a computer, you'll do just fine."
+    },
+    {
+      question: "What if this just isn't right for me?",
+      answer: "If after the first week you feel like it's not a fit, you can leave with no hard feelings. No pressure to continue."
+    },
+    {
+      question: "How do I know if this is a good fit?",
+      answer: "If you've got an idea and want to turn it into something real, without code, this is built exactly for you."
+    },
+    {
+      question: "How do I apply, and is space limited?",
+      answer: "Yes, space is limited. Just fill out the short application and we'll get back to you quickly."
+    },
+    {
+      question: "Where do we meet?",
+      answer: "It's an in-person program held in Barcelona, at a bright and inspiring co-working space in the city center."
+    },
+    {
+      question: "Do I need to buy any AI tools myself?",
+      answer: "Nope. We'll provide access to everything you need during the program."
     }
   ];
 
@@ -75,6 +107,10 @@ const PricingSection = () => {
               <div className="flex items-center space-x-2">
                 <span className="text-green-400">✓</span>
                 <span>Max 10 people per group</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-green-400">✓</span>
+                <span>In-person at a coworking hub</span>
               </div>
             </div>
           </div>

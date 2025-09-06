@@ -8,40 +8,30 @@ const LocationSection = () => {
       id: 0,
       icon: "🏢",
       title: "Your Creative Base at OneCoWork",
-      description: "A bright and inspiring coworking space in the city center, filled with plants, light, and thoughtful design.",
-      location: {
-        name: "Barcelona City Center",
-        details: "Easy access by metro and bus"
-      },
+      description: "A bright and inspiring coworking space in the city center, filled with plants, light, and thoughtful design. Whether you're collaborating or deep in flow, OneCoWork gives you the clarity and comfort to stay focused and do your best work.",
       image: {
-        emoji: "🏢",
-        title: "OneCoWork Barcelona",
-        subtitle: "Modern Coworking Space",
-        gradient: "from-blue-400/20 via-green-400/20 to-yellow-400/20"
+        src: "/cowork.jpeg",
+        alt: "OneCoWork Barcelona coworking space"
       }
     },
     {
       id: 1,
       icon: "💭",
       title: "Where We Think and Build Together",
-      description: "A quiet, fully equipped space with fast Wi-Fi, big screens, and comfy chairs.",
+      description: "A quiet, fully equipped space with fast Wi-Fi, big screens, and comfy chairs. Ideal for team collaboration, solo focus, or hands-on sessions. Everything you need to think clearly and build fast — without distractions.",
       image: {
-        emoji: "💭",
-        title: "Collaborative Workspace",
-        subtitle: "Think & Build Together",
-        gradient: "from-purple-400/20 via-pink-400/20 to-orange-400/20"
+        src: "/room.jpeg",
+        alt: "Collaborative workspace with modern setup"
       }
     },
     {
       id: 2,
       icon: "🌅",
       title: "Learn and Build in Beautiful Barcelona",
-      description: "A city bursting with creative energy, Barcelona offers sun, culture, and a growing tech scene.",
+      description: "A city bursting with creative energy, Barcelona offers sun, culture, and a growing tech scene. It’s the perfect home for makers who want to move fast, stay inspired, and build real solutions in a place that thrives on innovation.",
       image: {
-        emoji: "🌅",
-        title: "Beautiful Barcelona",
-        subtitle: "Creative Energy & Innovation",
-        gradient: "from-yellow-400/20 via-orange-400/20 to-red-400/20"
+        src: "/barcelona.jpeg",
+        alt: "Beautiful Barcelona cityscape"
       }
     }
   ];
@@ -134,18 +124,16 @@ const LocationSection = () => {
                         )}
                       </div>
 
-                      {/* Image */}
-                      <div className="relative">
-                        <div className="aspect-[4/3] bg-gradient-to-br from-secondary to-muted rounded-2xl overflow-hidden shadow-2xl">
-                          <div className={`w-full h-full bg-gradient-to-br ${card.image.gradient} flex items-center justify-center`}>
-                            <div className="text-center text-muted-foreground">
-                              <div className="text-6xl mb-4">{card.image.emoji}</div>
-                              <p className="text-lg font-medium">{card.image.title}</p>
-                              <p className="text-sm">{card.image.subtitle}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                       {/* Image */}
+                       <div className="relative">
+                         <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                           <img 
+                             src={card.image.src} 
+                             alt={card.image.alt}
+                             className="w-full h-full object-cover"
+                           />
+                         </div>
+                       </div>
                     </div>
                   </div>
                 </div>
