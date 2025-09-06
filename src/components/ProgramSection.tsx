@@ -24,7 +24,7 @@ const ProgramSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 mb-6">
             <span className="text-brand-orange text-sm font-bold tracking-wide uppercase">
-              🔥 PROGRAM
+              ✨ PROGRAM
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-4">

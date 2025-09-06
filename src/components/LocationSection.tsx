@@ -68,7 +68,8 @@ const LocationSection = () => {
         <div className="relative max-w-4xl mx-auto" style={{ height: '600px' }}>
           {cards.map((card, index) => {
             const isActive = activeCard === card.id;
-            const zIndex = isActive ? 30 : 20 - index;
+            // Ensure all cards are clickable by giving them proper z-index values
+            const zIndex = isActive ? 50 : 30 + index;
             const translateY = isActive ? 0 : index * 80;
             const scale = isActive ? 1 : 0.8;
             const opacity = isActive ? 1 : 0.5;

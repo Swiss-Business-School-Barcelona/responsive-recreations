@@ -125,7 +125,7 @@ All colors MUST be HSL.
   
   /* Make text less transparent globally */
   .text-muted-foreground {
-    opacity: 0.85 !important;
+    opacity: 0.90 !important;
   }
   
   /* Improve small text readability */

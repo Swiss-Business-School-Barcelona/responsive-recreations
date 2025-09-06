@@ -17,6 +17,24 @@ const PathSection = () => {
       title: "Design the Right Experience", 
       description: "Turn your solution into a digital product by designing how it works and how it feels",
       icon: "✏️"
+    },
+    {
+      number: "4",
+      title: "Build Without Code",
+      description: "Use AI tools and no-code platforms to bring your product to life with real functionality",
+      icon: "🔨"
+    },
+    {
+      number: "5",
+      title: "Test, Learn, Improve",
+      description: "Find early users, gather real feedback, and use the insights to refine your product",
+      icon: "🔬"
+    },
+    {
+      number: "6",
+      title: "Launch and Go Live",
+      description: "Put your product out into the world. Make it public, visible, and ready for growth",
+      icon: "🚀"
     }
   ];
 
@@ -27,7 +45,7 @@ const PathSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 mb-6">
             <span className="text-brand-orange text-sm font-bold tracking-wide uppercase">
-              🚀 PATH
+              PATH
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-muted-foreground mb-4">
@@ -39,7 +57,7 @@ const PathSection = () => {
         </div>
         
         {/* Step Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
