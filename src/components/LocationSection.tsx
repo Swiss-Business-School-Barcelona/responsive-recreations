@@ -2,6 +2,14 @@ import React from 'react';
 
 const LocationSection = () => {
   const [activeCard, setActiveCard] = React.useState(0);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const cards = [
     {
@@ -65,15 +73,14 @@ const LocationSection = () => {
 
         {/* Stacked Location Cards */}
         <div className="relative max-w-4xl mx-auto">
-
-          <div className="relative" style={{ height: '500px' }}>
+          <div className="relative" style={{ height: isMobile ? '600px' : '500px' }}>
             {cards.map((card, index) => {
               const isActive = activeCard === card.id;
 
               // Determine stacking order
               const zIndex = isActive ? cards.length + 1 : cards.length - index;
-              const translateY = isActive ? 0 : (index + 1) * 40;
-              const scale = isActive ? 1 : 0.9;
+              const translateY = isActive ? 0 : (index + 1) * (isMobile ? 30 : 40);
+              const scale = isActive ? 1 : (isMobile ? 0.95 : 0.9);
               const opacity = isActive ? 1 : 0.8;
 
               return (
@@ -90,39 +97,28 @@ const LocationSection = () => {
                   onClick={() => handleCardClick(card.id)}
                 >
                   <div
-                    className={`bg-card border rounded-xl p-8 transition-all duration-500 relative ${
+                    className={`bg-card border rounded-xl p-4 md:p-8 transition-all duration-500 relative ${
                       isActive
                         ? 'border-brand-orange/50 shadow-[0_0_30px_-5px_hsl(var(--brand-orange)/0.2)]'
                         : 'border-border hover:border-brand-orange/30 hover:shadow-lg'
                     }`}
                   >
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
                       {/* Content */}
-                      <div className="space-y-6">
+                      <div className="space-y-4 md:space-y-6 order-2 md:order-1">
                         <div className="w-12 h-12 bg-brand-orange/10 border border-brand-orange/20 rounded-lg flex items-center justify-center">
                           <span className="text-brand-orange text-xl">{card.icon}</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-foreground">
+                        <h3 className="text-xl md:text-2xl font-bold text-foreground">
                           {card.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                           {card.description}
                         </p>
-                        {card.location && (
-                          <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 bg-card border border-border rounded-lg flex items-center justify-center">
-                              <span className="text-brand-orange text-sm">📍</span>
-                            </div>
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">{card.location.name}</p>
-                              <p className="text-muted-foreground text-xs">{card.location.details}</p>
-                            </div>
-                          </div>
-                        )}
                       </div>
 
                        {/* Image */}
-                       <div className="relative">
+                       <div className="relative order-1 md:order-2">
                          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                            <img 
                              src={card.image.src} 
