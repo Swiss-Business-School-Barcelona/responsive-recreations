@@ -65,9 +65,6 @@ const LocationSection = () => {
 
         {/* Stacked Location Cards */}
         <div className="relative max-w-4xl mx-auto">
-          <p className="text-center text-muted-foreground text-sm mb-8">
-            Click a card to bring it forward (or click the active card to rotate)
-          </p>
 
           <div className="relative" style={{ height: '500px' }}>
             {cards.map((card, index) => {

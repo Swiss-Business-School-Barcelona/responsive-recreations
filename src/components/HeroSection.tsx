@@ -23,8 +23,8 @@ const HeroSection = () => {
       </div>
       <div className="container mx-auto max-w-4xl text-center">
         {/* Status Badge */}
-        <div className="inline-flex items-center space-x-2 mb-8 relative">
-          <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+        <div className="inline-flex items-center space-x-2 mb-8">
+          <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
           <span className="text-status-not-available text-sm font-medium tracking-wide uppercase">
             NOT AVAILABLE
           </span>
