@@ -5,7 +5,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="w-full px-6 py-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+    <header className="w-full px-6 py-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border relative z-50">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center">
@@ -68,7 +68,7 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg z-[9999]">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg z-[100]">
           <nav className="flex flex-col space-y-4 p-6">
             <a 
               href="#program" 
